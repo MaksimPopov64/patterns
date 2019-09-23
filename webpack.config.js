@@ -7,6 +7,18 @@ module.exports = {
     filename: 'bundle.js',
     path: path.join(__dirname, 'dist')
   },
+  module: {
+    rules: [
+        {
+            test: /\.js$/,
+            loader: 'babel-loader',           
+        }
+    ]
+},
+  stats: {
+         colors: true
+  },
+  devtool: 'source-map',
   devServer: {
     port: 4200,
     hot: true, 
